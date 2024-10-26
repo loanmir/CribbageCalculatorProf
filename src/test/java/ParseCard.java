@@ -34,4 +34,10 @@ public class ParseCard {
         assertEquals('D', card.suit());
     }
 
+    @Test
+    void withRankFive(){
+        Card card = cardParser.parse("5D");
+        assertEquals('5', card.rank());
+    }
+
 }
