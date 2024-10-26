@@ -1,0 +1,27 @@
+# BEHAVIOUR OF APPLICATION (FOR TDD TESTING APPROACH)
+
+- Print on standard output the score of a given Cribbage hand (String)
+- Compute the score of a Cribbage hand
+    - Distinguish hand cards from starter card
+    - Know the rank and suit of a card
+    - Combination of cards
+- Parse a Cribbage hand represented as a string
+    - Each rank corresponds to a numeric value
+    - Well defined set of values for rank and suit
+
+# TESTS
+
+- "5♥5♦5♠J♣5♣" -> print "29"
+- "0♦J♥Q♠A♣9♦" -> "4"
+- 0♦J♥Q♠A♣9♦ -> score is 29 -> this test need implementation ALMOST on every rule
+- 0♦J♥Q♠A♣9♦ -> score is 4 (run on four) -> good test for "run of four" code
+
+1st possible test (cause there is no much code)
+- "5♥5♦5♠J♣5♣" -> four hand cards(five of Hearts,...) and a starter card(five of Clubs)
+    - "5♥5♦5♠J♣5♣" -> recognizing that the five of Clubs is the starter card
+    - "5♥5♦5♠J♣5♣" -> the hand cards are ...
+even simpler test: (recognizing a single card)
+- "5♥" -> card with rank 5
+- "5♥" -> card with suit of Hearts
+- "5♦" -> card with suit of Diamonds
+and so on..
